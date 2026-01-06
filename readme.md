@@ -4,9 +4,9 @@ https://github.com/kaylorchen/rk3588-yolo-demo
 # Yolov8/v10 Demo for RK3588/RK3576
 The project is a multi-threaded inference demo of Yolov8 running on the RK3588 platform, which has been adapted for reading video files and camera feeds. The demo uses the Yolov8n model for file inference, with a maximum inference frame rate of up to 100 frames per second.
 
-# Tested on the following device
-[Chipsee RK3576 Debian12](https://chipsee.com/docs/PCs/ARM/index-rockchip.html#rk3576))
-[Chipsee RK3588 Debian12](https://chipsee.com/docs/PCs/ARM/index-rockchip.html#rk3588-a76)
+# Tested on the following device and system
+- [Chipsee RK3576 Debian12](https://chipsee.com/docs/PCs/ARM/index-rockchip.html#rk3576)
+- [Chipsee RK3588 Debian12](https://chipsee.com/docs/PCs/ARM/index-rockchip.html#rk3588-a76)
 
 # Prepare
 ## Install Runtime Libraries in Your RK3588/RK3576 Target Board

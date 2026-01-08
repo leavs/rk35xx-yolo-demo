@@ -32,6 +32,7 @@ mkdir build
 cd build
 cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
 make -j4
+make install
 ```
 
 - Run
@@ -45,9 +46,9 @@ Usage: ./imagefile_demo [--model_path|-m model_path] [--input_filename|-i input_
 
 - Demo
 ``` bash
-./imagefile_demo -m ../model/rk3588/yolov8s.rknn -i ../model/bus.jpg -l ../model/coco_80_labels_list.txt
-./videofile_demo -m ../model/rk3588/yolov8s.rknn -i ../model/example_640.mp4 -t 1 -f 30 -l ../model/coco_80_labels_list.txt
-./camera_demo -m ../model/rk3588/yolov8s.rknn -i 0 -w 640 -h 480 -t 2 -f 30 -l ../model/coco_80_labels_list.txt
+imagefile_demo -m /usr/local/model/rk3588/yolov8s.rknn -i /usr/local/model/bus.jpg -l /usr/local/model/coco_80_labels_list.txt
+videofile_demo -m /usr/local/model/rk3588/yolov8s.rknn -i /usr/local/model/example_640.mp4 -t 1 -f 30 -l /usr/local/model/coco_80_labels_list.txt
+camera_demo -m /usr/local/model/rk3588/yolov8s.rknn -i 0 -w 640 -h 480 -t 2 -f 30 -l /usr/local/model/coco_80_labels_list.txt
 ```
 > use `v4l2-ctl --list-devices` to get index of camera, like the following output, the index is 0.
 ``` bash

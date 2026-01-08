@@ -26,3 +26,11 @@ target_link_libraries(camera_demo ${kaylordut_LIBS} ${OpenCV_LIBS} yolov8-kaylor
 
 add_executable(imagefile_demo imagefile_demo.cpp)
 target_link_libraries(imagefile_demo ${kaylordut_LIBS} ${OpenCV_LIBS} yolov8-kaylordut ${bytetrack_LIBS})
+
+# Install binary
+install(TARGETS videofile_demo DESTINATION bin)
+install(TARGETS imagefile_demo DESTINATION bin)
+install(TARGETS camera_demo DESTINATION bin)
+
+# Install model
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/model DESTINATION ${CMAKE_INSTALL_PREFIX})

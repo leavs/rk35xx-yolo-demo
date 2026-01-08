@@ -208,7 +208,7 @@ int main(int argc, char *argv[]) {
 	int y = (screen_height - win_height) / 2;
 	std::cout << "Position: " << x << " x " << y << std::endl;
 	//cv::moveWindow("Video", x, y);
-	cv::moveWindow("Video", 0, 0);
+	cv::moveWindow("Video", 200, 0);
         cv::imshow("Video", *image_res);
         //        video_writer.write(*image_res);
         cv::waitKey(1);

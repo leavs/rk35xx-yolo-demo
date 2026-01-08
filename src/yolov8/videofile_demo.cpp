@@ -141,7 +141,7 @@ int main(int argc, char *argv[]) {
       }
       image_res = rknn_pool->GetImageResultFromQueue();
       if (image_res != nullptr) {
-	cv::moveWindow("Video", 0, 0);
+	cv::moveWindow("Video", 200, 0);
         cv::imshow("Video", *image_res);
         image_res_count++;
         KAYLORDUT_LOG_INFO("image count = {}, image res count = {}, delta = {}",

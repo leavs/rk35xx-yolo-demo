@@ -100,7 +100,7 @@ int main(int argc, char *argv[]) {
   while (image_res == nullptr) {
     image_res = rknn_pool->GetImageResultFromQueue();
   }
-  cv::moveWindow("Image demo", 0, 0);
+  cv::moveWindow("Image demo", 200, 0);
   cv::imshow("Image demo", *image_res);
   cv::waitKey(0);
   rknn_pool.reset();

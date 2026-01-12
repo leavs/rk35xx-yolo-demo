@@ -34,3 +34,7 @@ install(TARGETS camera_demo DESTINATION bin)
 
 # Install model
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/model DESTINATION ${CMAKE_INSTALL_PREFIX})
+
+# Install desktop files
+install(FILES ${CMAKE_SOURCE_DIR}/res/NPUCamDet.desktop DESTINATION /usr/share/applications)
+install(FILES ${CMAKE_SOURCE_DIR}/res/npu.png DESTINATION /usr/share/pixmaps)

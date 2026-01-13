@@ -30,7 +30,10 @@ git clone https://github.com/leavs/rk35xx-yolo-demo.git
 cd rk35xx-yolo-demo/src/yolov8
 mkdir build
 cd build
-cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
+# For RK3588
+cmake -DCHIPS=RK3588 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
+# For RK3576
+cmake -DCHIPS=RK3576 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
 make -j4
 make install
 ```

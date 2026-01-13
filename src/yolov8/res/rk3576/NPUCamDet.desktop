@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Cam Det
+Comment=NPU detection pipeline
+Exec=bash -c 'camera_demo -m /usr/local/model/rk3576/yolov8s.rknn -i 25 -w 1280 -h 720 -t 2 -f 30 -l /usr/local/model/coco_80_labels_list.txt'
+Icon=/usr/share/pixmaps/npu.png
+Terminal=true
+Type=Application
+Categories=Utility;

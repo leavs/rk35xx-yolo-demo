@@ -35,6 +35,27 @@ install(TARGETS camera_demo DESTINATION bin)
 # Install model
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/model DESTINATION ${CMAKE_INSTALL_PREFIX})
 
-# Install desktop files
-install(FILES ${CMAKE_SOURCE_DIR}/res/NPUCamDet.desktop DESTINATION /usr/share/applications)
+
+# Check if CHIPS is defined, otherwise set default value
+# If user does not specify -DCHIPS=RK3576 or -DCHIPS=RK3588,
+# the default will be CHIPS=RK3588
+if(NOT DEFINED CHIPS)
+    set(CHIPS "RK3588")
+endif()
+
+# Print which chip is selected
+message(STATUS "Selected CHIPS=${CHIPS}")
+
+# Install files based on the selected chip
+if(CHIPS STREQUAL "RK3576")
+    # Installation rules for RK3576
+    install(FILES ${CMAKE_SOURCE_DIR}/res/rk3576/NPUCamDet.desktop DESTINATION /usr/share/applications)
+elseif(CHIPS STREQUAL "RK3588")
+    # Installation rules for RK3588
+    install(FILES ${CMAKE_SOURCE_DIR}/res/rk3588/NPUCamDet.desktop DESTINATION /usr/share/applications)
+else()
+    message(FATAL_ERROR "Unknown CHIPS value: ${CHIPS}")
+endif()
+
+# Install Icons
 install(FILES ${CMAKE_SOURCE_DIR}/res/npu.png DESTINATION /usr/share/pixmaps)
